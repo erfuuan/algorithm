@@ -1,19 +1,19 @@
-function isValid(s) {
+function isValid(s){
     let stack=[]
-    const map = { ')': '(', ']': '[', '}': '{' };
+    const mapP={")":"(" ,"}":"{","]":"["}
 
-    for (const ch of s){
+    for(const ch of s){
         if(("{[(").includes(ch)){
             stack.push(ch)
         }else{
-            if(stack.pop()!==map[ch]){return false}
+            let popStack=stack.pop()
+            if(popStack!==mapP[ch]){return false}
         }
+
+    
     }
     return stack.length===0
-  }
-  
+}
 
-  console.log(isValid("()[]{}")); 
-
-
-  console.log(isValid("({[]})")); 
+console.log(isValid(")()[]{}")); 
+console.log(isValid("()[]{}"));

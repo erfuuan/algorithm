@@ -1,8 +1,9 @@
 function reverseString(str){
-    let result=''
-    for(let i=str.length-1;i>=0;i--){result+=str[i]}
+    let result=""
+    for(let i=str.length-1;i>=0;i--){
+        result+=str[i]
+    }
     return result
 }
-let response=reverseString("erfan")
-console.log(response)
 
+console.log(reverseString("erfan"))
